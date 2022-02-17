@@ -3,3 +3,6 @@
 
 ## 0.1.1
 - documentation fix missing gif
+
+## 0.1.1
+- documentation improvement
