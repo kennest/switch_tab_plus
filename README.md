@@ -25,7 +25,7 @@ SwitchTab(
 ```
 
 <p align="center">
-<img src="example.gif" alt="example" width="360">
+<img src="https://github.com/radikz/switch_tab/blob/master/example.gif" alt="example" width="360">
 </p>
 
 ## Contributing
