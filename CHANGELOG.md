@@ -6,3 +6,6 @@
 
 ## 0.1.2
 - documentation improvement
+
+## 0.1.3
+- move gif to doc folder
