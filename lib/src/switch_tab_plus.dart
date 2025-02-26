@@ -111,6 +111,7 @@ class _SwitchTabPlusState extends State<SwitchTabPlus> {
                   selectedTextColor: widget.selectedTextColor,
                   unselectedTextColor: widget.unselectedTextColor,
                   border: widget.border,
+                  gradient: widget.gradient,
                   selected: i == index,
                   text: widget.text[i],
                   icon: widget.icon?[i],
