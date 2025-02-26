@@ -4,18 +4,20 @@ import 'package:switch_tab/src/model/switch_tab_shape.dart';
 import 'package:switch_tab/src/single_tab_widget.dart';
 import 'package:switch_tab/src/switch_tab_border_radius.dart';
 
-class SwitchTab extends StatefulWidget {
-  const SwitchTab({
+class SwitchTabPlus extends StatefulWidget {
+  const SwitchTabPlus({
     Key? key,
     required this.onValueChanged,
     required this.text,
     this.backgroundColour = Colors.white,
     this.thumbColor = Colors.lightBlueAccent,
     this.icon,
+    this.border,
     this.shape = SwitchTabShape.rounded,
     this.selectedTextColor = Colors.black,
     this.unselectedTextColor = Colors.black,
-    this.style,
+    this.selectedStyle,
+    this.unSelectedStyle,
   })  : assert(text.length <= 2, "Must not more than 2"),
         super(key: key);
 
@@ -34,8 +36,14 @@ class SwitchTab extends StatefulWidget {
   /// The default value is a [Colors.lightBlueAccent].
   final Color? thumbColor;
 
+  /// The style used for selected text
+  final TextStyle? selectedStyle;
+
   /// The style used for text
-  final TextStyle? style;
+  final TextStyle? unSelectedStyle;
+
+  // The border of the tab
+  final BoxBorder? border;
 
   /// The color to paint the text when selected
   ///
@@ -56,10 +64,10 @@ class SwitchTab extends StatefulWidget {
   final SwitchTabShape shape;
 
   @override
-  _SwitchTabState createState() => _SwitchTabState();
+  _SwitchTabPlusState createState() => _SwitchTabPlusState();
 }
 
-class _SwitchTabState extends State<SwitchTab> {
+class _SwitchTabPlusState extends State<SwitchTabPlus> {
   late SwitchNotifier _notifier;
 
   @override
@@ -99,11 +107,13 @@ class _SwitchTabState extends State<SwitchTab> {
                   unSelectedColor: widget.backgroundColour!,
                   selectedTextColor: widget.selectedTextColor,
                   unselectedTextColor: widget.unselectedTextColor,
+                  border: widget.border,
                   selected: i == index,
                   text: widget.text[i],
                   icon: widget.icon?[i],
                   shape: widget.shape,
-                  style: widget.style,
+                  unSelectTextStyle: widget.unSelectedStyle,
+                  selectTextStyle: widget.selectedStyle,
                   onTap: () {
                     _notifier.change(i);
                     widget.onValueChanged(i);

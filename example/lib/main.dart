@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:switch_tab/switch_tab.dart';
+import 'package:switch_tab_plus/switch_tab_plus.dart';
 
 void main() {
   runApp(const MyApp());
@@ -33,14 +33,14 @@ class App extends StatelessWidget {
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [
-            SwitchTab(
+            SwitchTabPlus(
               text: const ["History", "Account"],
               onValueChanged: (index) {},
             ),
             const SizedBox(
               height: 16,
             ),
-            SwitchTab(
+            SwitchTabPlus(
               text: const ["Flutter", "React Native"],
               shape: SwitchTabShape.rectangle,
               thumbColor: Colors.orange,
@@ -49,7 +49,7 @@ class App extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
-            SwitchTab(
+            SwitchTabPlus(
               text: const ["Tab 1", "Tab 2"],
               shape: SwitchTabShape.rounded,
               selectedTextColor: Colors.white,
@@ -59,7 +59,7 @@ class App extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
-            SwitchTab(
+            SwitchTabPlus(
               text: const ["Home", "History"],
               icon: const [Icon(Icons.home), Icon(Icons.history)],
               shape: SwitchTabShape.rectangle,
@@ -70,7 +70,7 @@ class App extends StatelessWidget {
             const SizedBox(
               height: 16,
             ),
-            SwitchTab(
+            SwitchTabPlus(
               text: const ["Notification", "Account"],
               icon: const [
                 ImageIcon(AssetImage("assets/icon_notif_active.png")),
