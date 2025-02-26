@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:switch_tab/src/model/switch_tab_shape.dart';
-import 'package:switch_tab/src/switch_tab_border_radius.dart';
+import 'package:switch_tab_plus/src/model/switch_tab_shape.dart';
+import 'package:switch_tab_plus/src/switch_tab_border_radius.dart';
 
 class SingleTabWidget extends StatelessWidget {
   const SingleTabWidget(

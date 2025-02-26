@@ -1,7 +1,7 @@
 name: switch_tab_plus
 description: A flutter package that allows toggling as a tab bar.
 version: 0.1.3
-homepage: https://github.com/radikz/switch_tab
+homepage: https://github.com/kennest/switch_tab
 
 environment:
   sdk: ">=2.15.0 <3.0.0"
