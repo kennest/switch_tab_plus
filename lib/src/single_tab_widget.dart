@@ -44,7 +44,9 @@ class SingleTabWidget extends StatelessWidget {
           padding: const EdgeInsets.symmetric(vertical: 16),
           decoration: BoxDecoration(
             border: border,
-            color: selected ? selectedColor : unSelectedColor,
+            color: gradient == null
+                ? (selected ? selectedColor : unSelectedColor)
+                : null,
             gradient: selected ? gradient : null,
             borderRadius: shape.isRounded
                 ? SwitchTabBorderRadius.circularBorder
