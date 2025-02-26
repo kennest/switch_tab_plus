@@ -13,6 +13,7 @@ class SwitchTabPlus extends StatefulWidget {
     this.thumbColor = Colors.lightBlueAccent,
     this.icon,
     this.border,
+    this.gradient,
     this.shape = SwitchTabShape.rounded,
     this.selectedTextColor = Colors.black,
     this.unselectedTextColor = Colors.black,
@@ -45,7 +46,9 @@ class SwitchTabPlus extends StatefulWidget {
   // The border of the tab
   final BoxBorder? border;
 
-  /// The color to paint the text when selected
+  /// The gradiant the text when selected
+  final LinearGradient? gradient;
+
   ///
   /// Default value is a [Colors.black]; ignored if style is not null
   final Color selectedTextColor;

@@ -45,7 +45,7 @@ class SingleTabWidget extends StatelessWidget {
           decoration: BoxDecoration(
             border: border,
             color: selected ? selectedColor : unSelectedColor,
-            gradient: gradient,
+            gradient: selected ? gradient : null,
             borderRadius: shape.isRounded
                 ? SwitchTabBorderRadius.circularBorder
                 : SwitchTabBorderRadius.rectangleBorder,
